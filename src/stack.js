@@ -1,5 +1,3 @@
-const { NotImplementedError } = require('../lib');
-
 /**
  * Implement the Stack with a given interface via array.
  *
@@ -13,19 +11,20 @@ const { NotImplementedError } = require('../lib');
  *
  */
 class Stack {
-  push(/* value */) {
-    // Remove line below and write your code here
-    throw new NotImplementedError('Not implemented');
+  constructor() {
+    this.items = []; // элементы стека, верхний это последний в массиве
+  }
+
+  push(value) {
+    this.items.push(value); // положить сверху
   }
 
   pop() {
-    // Remove line below and write your code here
-    throw new NotImplementedError('Not implemented');
+    return this.items.pop(); // снять сверху (undefined, если пусто)
   }
 
   peek() {
-    // Remove line below and write your code here
-    throw new NotImplementedError('Not implemented');
+    return this.items[this.items.length - 1]; // посмотреть верхний, не снимая
   }
 }
 
